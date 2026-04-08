@@ -1,11 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Telegram Proxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Telegram Proxy</title>
   <script>
-    location.replace("__TG_PROXY_URL__");
+    const tgUrl = "__TG_PROXY_URL__";
+    window.addEventListener("load", () => {
+      window.location.replace(tgUrl);
+    });
   </script>
+  <style>
+    body { font-family: sans-serif; max-width: 560px; margin: 40px auto; padding: 0 16px; line-height: 1.5; }
+    a { display: inline-block; margin-top: 16px; padding: 10px 14px; border-radius: 8px; text-decoration: none; background: #0a84ff; color: white; }
+  </style>
 </head>
-<body>Opening Telegram…</body>
+<body>
+  <h1>Opening Telegram…</h1>
+  <p>If nothing happened, tap the button below.</p>
+  <a href="__TG_PROXY_URL__">Open Telegram</a>
+</body>
 </html>
